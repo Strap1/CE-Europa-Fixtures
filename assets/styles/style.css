@@ -1,0 +1,116 @@
+body {
+  background-color: #23568A;
+  padding: 0, 1%, 0, 1%;
+  min-height: 10rem;
+}
+
+main {
+  color: #23568A;
+}
+
+a {
+  color: #23568A;
+}
+
+h1 img {
+  padding: 0.3rem;
+}
+
+.container-fluid {
+  padding: 0.3rem;
+}
+
+.wrap {
+  max-width: 1500px;
+  background-color: #FFF;
+  border-radius: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.1rem;
+}
+
+.content {
+  border: 0.3rem solid #23568A;
+  border-radius: 1rem;
+  margin: 0.1rem;
+}
+
+.page-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#fixtures {
+  border: 0.25rem solid #23568A;
+  color: #23568A;
+}
+
+/* Sticky the header? */
+/*
+thead tr:nth-child(1) th {
+  background: #FFF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}*/
+
+thead {
+  border: 0.25rem solid #23568A;
+}
+
+td, th, tr {
+  border: 0.1rem solid #23568A;
+}
+
+.footer {
+  color: #23568A;
+}
+
+.hidden {
+  display: none;
+}
+
+.past {
+  background-color: rgba(35, 86, 138, 0.2);
+}
+
+.today {
+  background-color: rgba(170, 247, 163, 0.8);
+}
+
+.future {
+  background-color: rgba(35, 86, 138, 0.3);
+}
+
+.today, .next-match {
+    transition: all 5s ease;
+    animation: imganim 2s infinite linear both;
+}
+
+@keyframes imganim {
+  0% {background-color: rgba(170, 247, 163, 0.8);}
+  50% {background-color: #FFF;}
+  100% {background-color: rgba(170, 247, 163, 0.8);}
+}
+
+.today img, .next-match img {
+    transition: all 5s ease;
+    animation: rotate 3s infinite linear both;
+}
+
+@keyframes rotate {
+  0% {}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.today i, .today .data, .today .hora, .next-match i, .next-match .data, .next-match .hora, .next-match .jornada {
+    transition: all 3s ease;
+    animation: pulsate 1s infinite linear both;
+}
+
+@keyframes pulsate {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
