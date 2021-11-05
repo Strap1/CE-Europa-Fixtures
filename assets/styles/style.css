@@ -30,7 +30,7 @@ h1 img {
 }
 
 .content {
-  border: 0.3rem solid #23568A;
+  border: 0.1rem solid #23568A;
   border-radius: 1rem;
   margin: 0.1rem;
 }
@@ -40,9 +40,30 @@ h1 img {
   margin-right: auto;
 }
 
+.loading::after {
+  display: inline-block;
+  animation: dotty steps(1,end) 1s infinite;
+  content: '';
+  padding-right: 20px;
+}
+
+@keyframes dotty {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+}
+    
+
 #fixtures {
   border: 0.25rem solid #23568A;
   color: #23568A;
+}
+
+/* Initially hide main content */
+.table-responsive-sm, .controls {
+  display: none;
 }
 
 /* Sticky the header? */
