@@ -11,10 +11,11 @@ async function fetchData() {
 }
 
 fetchData().then(([matches, league]) => {
-  // Show table & controls
+  // Remove loading
   document.getElementById("placeholder").remove();
+  // Show table & controls
   document.getElementsByClassName("table-responsive-sm")[0].style.display = "flex";
-  document.getElementsByClassName("controls")[0].style.display = "flex";
+  //document.getElementsByClassName("controls")[0].style.display = "flex";
   // Find our table
   let tbodyRef = document.getElementById("fixtures").getElementsByTagName("tbody")[0];
   var countNextMatch = 0;
